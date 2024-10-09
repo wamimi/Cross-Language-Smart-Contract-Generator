@@ -9,12 +9,13 @@ function ParameterInput({ template, onChange }) {
   if (!template) return null;
 
   return (
-    <div>
+    <div className="parameter-input">
       <h2>Enter Parameters</h2>
       {templateParams[template].map(param => (
-        <div key={param}>
-          <label>{param}: </label>
+        <div key={param} className="parameter-field">
+          <label htmlFor={param}>{param}: </label>
           <input 
+            id={param}
             type="text" 
             onChange={(e) => onChange(param, e.target.value)} 
           />

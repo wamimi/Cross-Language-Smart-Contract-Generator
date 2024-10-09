@@ -4,7 +4,7 @@ const templates = ['ERC20', 'ERC721'];
 
 function TemplateSelector({ onSelect }) {
   return (
-    <div>
+    <div className="template-selector">
       <h2>Select a Contract Template</h2>
       <select onChange={(e) => onSelect(e.target.value)}>
         <option value="">Select a template</option>

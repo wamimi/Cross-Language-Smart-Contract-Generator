@@ -1,35 +1,162 @@
 .code-display {
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 
 .code-container {
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .code-block {
   position: relative;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid #d8b4fe;
+  border-radius: 0.5rem;
   overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
 }
 
 .copy-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #f0f0f0;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: #a855f7;
+  color: white;
   border: none;
-  border-radius: 4px;
-  padding: 5px 10px;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .copy-button:hover {
-  background-color: #e0e0e0;
+  background-color: #9333ea;
 }
 
-/* Adjust the SyntaxHighlighter styles */
 .code-block pre {
   margin: 0 !important;
-  padding: 20px !important;
+  padding: 1.5rem !important;
+}
+
+/* Custom scrollbar for webkit browsers */
+.code-block pre::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.code-block pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.code-block pre::-webkit-scrollbar-thumb {
+  background-color: #a855f7;
+  border-radius: 4px;
+}
+
+/* Syntax highlighting theme */
+.hljs {
+  color: #d1d5db;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-name,
+.hljs-strong {
+  color: #d8b4fe;
+}
+
+.hljs-string,
+.hljs-attr,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-subst,
+.hljs-regexp,
+.hljs-link {
+  color: #86efac;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #6b7280;
+}
+
+.hljs-literal,
+.hljs-number {
+  color: #93c5fd;
+}
+
+/* Additional styles for overall layout */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f3e8ff;
+}
+
+h1 {
+  color: #6b21a8;
+  text-align: center;
+}
+
+button {
+  background-color: #a855f7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #9333ea;
+}
+
+select, input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #d8b4fe;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #6b21a8;
+  font-weight: bold;
+}
+/* Add these rules to the end of your existing App.css */
+
+.parameter-input, .template-selector {
+  margin-bottom: 20px;
+}
+
+.parameter-field {
+  margin-bottom: 10px;
+}
+
+.parameter-field label {
+  display: inline-block;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.parameter-field input {
+  width: calc(100% - 110px);
+}
+
+.template-selector select {
+  width: 100%;
 }
